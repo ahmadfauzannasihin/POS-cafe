@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.sidenav {
+		@apply flex flex-col justify-center items-center  text-primary border-2 border-primary p-3 rounded-xl w-20 hover:text-secondary hover:border-secondary;
+	}
+	.sidenavActive {
+		@apply flex flex-col justify-center items-center w-20 text-accent bg-primary p-3 rounded-xl hover:text-secondary;
+	}
+	::-webkit-scrollbar {
+		@apply w-2;
+	}
+	::-webkit-scrollbar-track {
+		@apply bg-primary/40;
+	}
+	::-webkit-scrollbar-thumb {
+		@apply bg-primary/80 rounded-md;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		@apply bg-primary;
+	}
+	tbody tr:nth-child(odd) {
+		@apply bg-white hover:bg-primary/20;
+	}
+	tbody tr:nth-child(even) {
+		@apply bg-accent hover:bg-primary/20;
+	}
+}
